@@ -12,7 +12,11 @@ $(document).ready(function(){
 
     const journalEntry = new JournalEntry(inputTitle, inputBody);
 
-    // $("#total-words").text(total);
-    // $("#initially-hidden").show();
+    $("#input-title").append(journalEntry.title);
+    $("#input-title").append(journalEntry.body);
+
+    $("#total-consonants").append(journalEntry.getConsonants().length);
+    $("#total-vowels").append(journalEntry.getVowels().length);
+    $("#initially-hidden").show();
   });
 });

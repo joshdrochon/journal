@@ -4,15 +4,20 @@
     <title>Journal</title>
   </head>
   <body>
-    <form id="journal-form">
-      <label for="title">Title:</label>
-      <input id="title" type="text">
-      <label for="body"></label>
-      <input id="body" type="text">
-      <button type="submit">Submit</button>
-    </form>
+    <div class="jumbotron">
+      <form id="journal-form">
+        <label for="title">Title:</label>
+        <input id="title" type="text">
+        <label for="body"></label>
+        <input id="body" type="text">
+        <button class="btn btn-success" type="submit">Submit</button>
+      </form>
+    </div>
     <div id="initially-hidden">
-      <p>There are <span id="total-words"> words in your title and body.</span></p>
+      <h2>Title: </h2><span id="input-title"></span>
+      <h2>Body: </h2><span id="input-body"></span>
+      <p>The body contains <span id="total-consonants"></span>consonant(s) and
+        <span id="total-vowels"></span> vowel(s).</p>
     </div>
   </body>
 </html>
