@@ -1,22 +1,22 @@
-import { JournalEntry } from './journal.js';
+import { Haiku } from './haiku.js';
 import './styles.css';
 import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 $(document).ready(function(){
-  $("#journal-form").submit(function(event){
+  $("#haiku-form").submit(function(event){
     event.preventDefault();
     var inputTitle = $("#title").val();
     var inputBody = $("#body").val();
 
-    const journalEntry = new JournalEntry(inputTitle, inputBody);
+    const newHaiku = new Haiku(inputTitle, inputBody);
 
-    $("#input-title").append(journalEntry.title);
-    $("#input-title").append(journalEntry.body);
+    $("#input-title").append(newHaiku.title);
+    $("#input-title").append(newHaiku.body);
 
-    $("#total-consonants").append(journalEntry.getConsonants().length);
-    $("#total-vowels").append(journalEntry.getVowels().length);
+    $("#total-consonants").append(newHaiku.getConsonants().length);
+    $("#total-vowels").append(newHaiku.getVowels().length);
     $("#initially-hidden").show();
   });
 });
