@@ -97,23 +97,24 @@ export class Haiku
     };
 
     let counter = 0; //will get a tick w/ each syllable
-    let str = this.body;
+    let bd = this.body;
 
     for(let i = 1; i <= 20; i++)
     {
-      if(str.includes(diphThongs[i]))
+      if(bd.includes(diphThongs[i]))
       {
         counter++;
       }
     }
 
+    let vowels = this.getVowels().length;
+    let consts = this.getConsonants().length;
+
+    if(vowels === consts)
+    {
+      counter += consts/3;
+    }
     return counter;
   }
 
 }// end class
-
-
-//need a way to store user input into a data structure
-//need a way to parse the data structure
-//need a method to determine when the data is considered a syllable
-//need to return the counter to display amount of syllable

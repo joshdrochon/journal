@@ -29,8 +29,8 @@ describe('Haiku', function()
 
   it('should test the getSyllables method', function()
   {
-    const newHaiku = new Haiku("Title", "Some Haikuo");
-    expect(newHaiku.getSyllables()).toEqual(2);
+    const newHaiku = new Haiku("Title", "Somme Haikkuo");
+    expect(newHaiku.getSyllables()).toEqual(4);
     console.log(newHaiku.getSyllables());
 
   });
